@@ -1,0 +1,30 @@
+==1826== Memcheck, a memory error detector
+==1826== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1826== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==1826== Command: ./a.out
+==1826== Parent PID: 1617
+==1826== 
+==1826== Invalid read of size 1
+==1826==    at 0x4838C74: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1826==    by 0x48B09EE: vfprintf (vfprintf.c:1638)
+==1826==    by 0x48B7605: printf (printf.c:33)
+==1826==    by 0x1091F6: main (lab4File2.c:18)
+==1826==  Address 0x4a28332 is 0 bytes after a block of size 2 alloc'd
+==1826==    at 0x4837D7B: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1826==    by 0x1091D6: main (lab4File2.c:17)
+==1826== 
+==1826== 
+==1826== HEAP SUMMARY:
+==1826==     in use at exit: 2 bytes in 1 blocks
+==1826==   total heap usage: 4 allocs, 3 frees, 21,036 bytes allocated
+==1826== 
+==1826== LEAK SUMMARY:
+==1826==    definitely lost: 2 bytes in 1 blocks
+==1826==    indirectly lost: 0 bytes in 0 blocks
+==1826==      possibly lost: 0 bytes in 0 blocks
+==1826==    still reachable: 0 bytes in 0 blocks
+==1826==         suppressed: 0 bytes in 0 blocks
+==1826== Rerun with --leak-check=full to see details of leaked memory
+==1826== 
+==1826== For counts of detected and suppressed errors, rerun with: -v
+==1826== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
